@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "crop_ai",
+    "slug": "crop_ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "cropai",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gowtham213.crop-ai"
+    },
+    "android": {
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.gowtham213.crop_ai",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ],
+      "expo-sqlite",
+      "react-native-fast-tflite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Crop Doctor to access your photo library."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow ParnaDrishti to access camera"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "53b86e0c-8857-46fa-8cd7-ab2f14e2be22"
+      }
+    }
+  }
+}
